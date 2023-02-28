@@ -14,9 +14,14 @@ class Matriz():
         self.matriz[linha].append(elemento)
 
     def rotate(self,linha):
-        self.matriz[linha].insert(0,self.matriz[linha][len(self.matriz[linha])-1])
+        self.matriz[linha].insert(0, self.matriz[linha][len(self.matriz[linha])-1])
         self.matriz[linha].pop(len(self.matriz[linha])-1)
         self.rotacoes[linha] += 1
 
+    def compare(self,target):
+        if self.matriz == target:
+            return True
+        else:
+            return False
 
 
