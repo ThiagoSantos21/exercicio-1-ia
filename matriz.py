@@ -1,6 +1,7 @@
 class Matriz():
     matriz = []
     rotacoes = []
+    estados = 0
 
     def __init__(self,matriz):
         self.matriz = matriz
@@ -17,6 +18,8 @@ class Matriz():
         self.matriz[linha].insert(0, self.matriz[linha][len(self.matriz[linha])-1])
         self.matriz[linha].pop(len(self.matriz[linha])-1)
         self.rotacoes[linha] += 1
+        if self.rotacoes[linha] == len(self.matriz[linha]):
+            self.rotacoes[linha] = 0
 
     def compare(self,target):
         if self.matriz == target:
