@@ -14,11 +14,9 @@ def procurar_matriz(inicial, alvo, linha_atual):
             if inicial.compare(alvo):
                 return True
             else:
-                print('{0} - {1}'.format(inicial.matriz, inicial.estados))
                 inicial.estados += 1
                 inicial.rotate(linha_atual)
         else:
-            print('{0} - {1}'.format(inicial.matriz, inicial.estados))
             if inicial.compare(alvo):
                 return True
             else:
